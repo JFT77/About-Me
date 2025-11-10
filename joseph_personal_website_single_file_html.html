@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Joseph Felix Tinkasimile — Portfolio</title>
+  <meta name="description" content="Business & IT student in Berlin. Finance & Operations experience. Process improvement, digitalization, and people ops." />
+  <meta property="og:title" content="Joseph Felix Tinkasimile — Portfolio" />
+  <meta property="og:description" content="Business & IT | Finance & Operations | Process Improvement" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220; --card: #121a2b; --muted: #93a4bf; --text: #e7eefc; --accent: #0ea5e9; --accent-2: #22d3ee; --ring: rgba(34,211,238,.4)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;scroll-behavior:smooth;color:var(--text);background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.08), transparent),
+      radial-gradient(900px 400px at 90% 10%, rgba(14,165,233,.10), transparent), var(--bg)}
+    img{max-width:100%;display:block}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1080px;margin:0 auto;padding:0 24px}
+    /* NAV */
+    .navbar{position:sticky;top:0;background:rgba(11,18,32,.75);backdrop-filter: blur(12px);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#001018;font-weight:800}
+    nav a{margin-left:16px;color:var(--muted);font-weight:500}
+    nav a:hover{color:var(--text)}
+    /* HERO */
+    .hero{padding:80px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(14,165,233,.12);border:1px solid rgba(34,211,238,.25);color:#c5f6ff;padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.2px}
+    h1{font-size:44px;line-height:1.1;margin:14px 0 8px}
+    .lead{color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:12px 16px;border-radius:12px;color:var(--text);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.00))}
+    .btn.primary{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001018;font-weight:700}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:12px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
+    section{padding:56px 0}
+    h2{font-size:26px;margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;gap:16px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    /* SERVICES */
+    .service{padding:18px}
+    .service h3{margin:8px 0 6px}
+    .tag{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#cfe6ff;font-size:12px;margin:4px 6px 0 0}
+    /* TIMELINE */
+    .xp-item{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:14px;border-left:2px solid rgba(255,255,255,.08)}
+    .xp-item + .xp-item{margin-top:6px}
+    /* PROJECTS */
+    .project{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
+    .proj-body{padding:14px}
+    /* CONTACT */
+    .contact{display:flex;gap:12px;flex-wrap:wrap}
+    .contact a{border:1px solid rgba(255,255,255,.1);padding:10px 12px;border-radius:10px}
+    footer{padding:32px 0;color:var(--muted)}
+    @media (max-width: 980px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden>JF</div>
+        <div>
+          <strong>Joseph Felix Tinkasimile</strong><br>
+          <span class="muted">Business & IT · Finance & Ops · Berlin</span>
+        </div>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div>
+        <span class="badge">Open to: Business Analyst · HR / People Ops · Operations</span>
+        <h1>Hi, I’m Joseph — I streamline processes and support teams.</h1>
+        <p class="lead">Business & IT student in Berlin with hands‑on experience in finance and warehouse operations. I love turning messy processes into clear, efficient workflows and building lightweight tools that help teams move faster.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contact">Contact me</a>
+          <a class="btn" href="#projects">See my projects</a>
+          <a class="btn" href="assets/Joseph_Felix_CV.pdf" download>Download CV</a>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+          <span class="pill">Berlin, Germany</span>
+          <span class="pill">English · Swahili · German</span>
+          <span class="pill">Available part‑time / full‑time</span>
+        </div>
+      </div>
+      <div class="card">
+        <h2 style="margin-top:0">Highlights</h2>
+        <ul class="muted">
+          <li>Automated manual finance tasks, reducing errors and boosting output.</li>
+          <li>Consistently hit fast pick‑pack rates in fulfillment operations.</li>
+          <li>Built a simple scheduling web app prototype to explore shift planning.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p class="muted">I combine a business mindset with practical tech skills (web basics, scripting, spreadsheets) to improve day‑to‑day operations. I enjoy cross‑functional work, clear communication, and making small systems that remove friction for teammates.</p>
+    </section>
+
+    <section id="services">
+      <h2>My Services</h2>
+      <div class="grid cols-3">
+        <div class="card service">
+          <h3>Operations Support</h3>
+          <p class="muted">Fast, accurate pick‑pack, inventory organization, labeling, and inbound handling. Focus on safety and throughput.</p>
+          <div>
+            <span class="tag">Fulfillment</span><span class="tag">Inventory</span><span class="tag">5S</span>
+          </div>
+        </div>
+        <div class="card service">
+          <h3>Business & Data Basics</h3>
+          <p class="muted">Dashboards and reports in spreadsheets; data cleaning; KPI tracking for small teams.</p>
+          <div>
+            <span class="tag">Excel</span><span class="tag">Statistics</span><span class="tag">KPIs</span>
+          </div>
+        </div>
+        <div class="card service">
+          <h3>Web & IT (Entry)</h3>
+          <p class="muted">Landing pages, simple automations, and troubleshooting for networks/devices.</p>
+          <div>
+            <span class="tag">HTML/CSS/JS</span><span class="tag">Trello</span><span class="tag">Networking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My Work</h2>
+      <div class="grid cols-3">
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="Operations dashboard preview">
+          <div class="proj-body">
+            <h3 style="margin:0 0 6px">Shift Scheduler (Prototype)</h3>
+            <p class="muted">Lightweight web tool to mock weekly shift planning and visualize coverage.</p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop" alt="Warehouse organization">
+          <div class="proj-body">
+            <h3 style="margin:0 0 6px">Pick‑Pack Optimization</h3>
+            <p class="muted">Improved labeling & bin organization to reduce search time for top SKUs.</p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop" alt="Finance automation">
+          <div class="proj-body">
+            <h3 style="margin:0 0 6px">Finance Task Automation</h3>
+            <p class="muted">Spreadsheet scripts to reduce manual entries and errors in event budgets.</p>
+          </div>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:10px">Want a full case study? <a href="#contact">Contact me</a> and I’ll share details.</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="xp-item card">
+          <div class="muted">07/2024 – 03/2025<br>Berlin</div>
+          <div>
+            <strong>Warehouse Worker — acut fulfillment</strong>
+            <ul class="muted">
+              <li>Picked, packed and shipped ~30 orders/hour with attention to accuracy.</li>
+              <li>Helped assemble warehouse shelving and move inventory during expansion.</li>
+              <li>Labeled and organized inbound books; learned their internal Apache-based system.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="xp-item card">
+          <div class="muted">10/2023<br>Berlin</div>
+          <div>
+            <strong>Warehouse Worker — Metamorph GmbH</strong>
+            <ul class="muted">
+              <li>Improved team productivity by focusing on time management and coordinated schedules.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="xp-item card">
+          <div class="muted">01/2020 – 06/2022<br>Dar es Salaam</div>
+          <div>
+            <strong>Assistant Financial Manager — AISS International School</strong>
+            <ul class="muted">
+              <li>Automated manual finance tasks, reduced errors, and improved throughput.</li>
+              <li>Helped manage budgets for school events and delivered post‑event reports.</li>
+              <li>Collaborated in projects using Agile/Scrum practices.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="card">
+        <div class="tag">Microsoft Office</div>
+        <div class="tag">Agile / Scrum</div>
+        <div class="tag">JavaScript</div>
+        <div class="tag">HTML &amp; CSS</div>
+        <div class="tag">SQL</div>
+        <div class="tag">Java</div>
+        <div class="tag">Cybersecurity (basics)</div>
+        <div class="tag">Website design (basics)</div>
+        <div class="tag">Statistics</div>
+        <div class="tag">Network troubleshooting</div>
+        <div class="tag">Trello</div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <strong>B.Sc. Business &amp; IT — IU International University of Applied Sciences</strong>
+          <div class="muted">Berlin · Coursework: Business Admin, Cybersecurity, Web Dev (JS/HTML/CSS), Managerial Accounting, Scrum, Networking</div>
+        </div>
+        <div class="card">
+          <strong>GCSE Cambridge (Forms 4–6) — Academic International School</strong>
+          <div class="muted">Dar es Salaam · Physics, Computer Science & Programming, Pure Math, Statistics & Probability, Mechanics</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="muted">Reach out for roles in Business Analysis, HR/People Ops, or Operations. I’m happy to share more details or references.</p>
+      <div class="contact">
+        <a href="mailto:jftinka7@gmail.com" aria-label="Email Joseph">Email</a>
+        <a href="tel:+4915231304457" aria-label="Call Joseph">Phone</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="padding:0">
+      <small>© <span id="y"></span> Joseph Felix Tinkasimile. Built with clean HTML/CSS.</small>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
