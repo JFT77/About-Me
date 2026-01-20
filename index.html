@@ -1,301 +1,697 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Joseph Felix Tinkasimile Portfolio</title>
-  <meta name="description" content="Business & IT student in Berlin. Finance & Operations experience. Process improvement, digitalization, and people ops." />
-  <meta property="og:title" content="Joseph Felix Tinkasimile Portfolio" />
-  <meta property="og:description" content="Business & IT | Finance & Operations | Process Improvement" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0ea5e9" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: #0b1220; --card: #121a2b; --muted: #93a4bf; --text: #e7eefc; --accent: #0ea5e9; --accent-2: #22d3ee; --ring: rgba(34,211,238,.4)
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;scroll-behavior:smooth;color:var(--text);background:
-      radial-gradient(1200px 600px at 10% -10%, rgba(34,211,238,.08), transparent),
-      radial-gradient(900px 400px at 90% 10%, rgba(14,165,233,.10), transparent), var(--bg)}
-    img{max-width:100%;display:block}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{max-width:1080px;margin:0 auto;padding:0 24px}
-    /* NAV */
-    .navbar{position:sticky;top:0;background:rgba(11,18,32,.75);backdrop-filter: blur(12px);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
-    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;color:#001018;font-weight:800}
-    nav a{margin-left:16px;color:var(--muted);font-weight:500}
-    nav a:hover{color:var(--text)}
-    /* HERO */
-    .hero{padding:80px 0 48px;display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
-    .badge{display:inline-flex;gap:8px;align-items:center;background:rgba(14,165,233,.12);border:1px solid rgba(34,211,238,.25);color:#c5f6ff;padding:6px 12px;border-radius:999px;font-size:12px;letter-spacing:.2px}
-    h1{font-size:44px;line-height:1.1;margin:14px 0 8px}
-    .lead{color:var(--muted);font-size:18px}
-    .cta{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.12);padding:12px 16px;border-radius:12px;color:var(--text);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.00))}
-    .btn.primary{border-color:transparent;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#001018;font-weight:700}
-    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);font-size:12px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px}
-    section{padding:56px 0}
-    h2{font-size:26px;margin:0 0 12px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;gap:16px}
-    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
-    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
-    /* SERVICES */
-    .service{padding:18px}
-    .service h3{margin:8px 0 6px}
-    .tag{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:#cfe6ff;font-size:12px;margin:4px 6px 0 0}
-    /* TIMELINE */
-    .xp-item{display:grid;grid-template-columns:140px 1fr;gap:16px;padding:14px;border-left:2px solid rgba(255,255,255,.08)}
-    .xp-item + .xp-item{margin-top:6px}
-    /* PROJECTS */
-    .project{border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.08)}
-    .proj-body{padding:14px}
-    /* CONTACT */
-    .contact{display:flex;gap:12px;flex-wrap:wrap}
-    .contact a{border:1px solid rgba(255,255,255,.1);padding:10px 12px;border-radius:10px}
-    footer{padding:32px 0;color:var(--muted)}
-    @media (max-width: 980px){.hero{grid-template-columns:1fr}}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Felix Tinkasimile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000;
+            color: #f5f5f7;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1000;
+            padding: 0 22px;
+        }
+
+        .nav-content {
+            max-width: 980px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 600;
+            color: #f5f5f7;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #f5f5f7;
+            text-decoration: none;
+            font-size: 12px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.015em;
+        }
+
+        .hero .subtitle {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 12px;
+            opacity: 0.9;
+        }
+
+        .hero .tagline {
+            font-size: 21px;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 980px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #0071e3;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: #0077ed;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2997ff;
+            border: 1px solid #2997ff;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(41, 151, 255, 0.1);
+        }
+
+        /* Section */
+        .section {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 100px 22px;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: -0.015em;
+        }
+
+        .section-subtitle {
+            font-size: 21px;
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0.8;
+        }
+
+        /* Product Cards (Services) */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: #1d1d1f;
+            border-radius: 18px;
+            padding: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-card h3 {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .product-card p {
+            font-size: 17px;
+            line-height: 1.5;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* Feature Sections */
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .feature:nth-child(even) {
+            direction: rtl;
+        }
+
+        .feature:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        .feature-image {
+            width: 100%;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+
+        .feature-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .feature-content h3 {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .feature-content p {
+            font-size: 21px;
+            line-height: 1.5;
+            opacity: 0.8;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -44px;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #667eea;
+            border: 3px solid #000;
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            opacity: 0.6;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .timeline-company {
+            font-size: 17px;
+            opacity: 0.8;
+            margin-bottom: 12px;
+        }
+
+        .timeline-description {
+            font-size: 17px;
+            opacity: 0.7;
+            line-height: 1.5;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 17px;
+            transition: all 0.3s;
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: #1d1d1f;
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: #2d2d2f;
+            transform: translateY(-4px);
+        }
+
+        .contact-card h4 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .contact-card a {
+            color: #2997ff;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d1d1f;
+            padding: 40px 22px;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        footer p {
+            opacity: 0.6;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero .subtitle {
+                font-size: 21px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .feature {
+                grid-template-columns: 1fr;
+            }
+
+            .feature:nth-child(even) {
+                direction: ltr;
+            }
+
+            .nav-links {
+                gap: 16px;
+                font-size: 11px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="container nav-wrap">
-      <div class="brand">
-        <div class="logo" aria-hidden>JF</div>
-        <div>
-          <strong>Joseph Felix Tinkasimile</strong><br>
-          <span class="muted">Business & IT · Finance & Ops · Berlin</span>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">JFT</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <nav aria-label="Primary">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    </nav>
 
-  <main id="home" class="container">
+    <!-- Hero Section -->
     <section class="hero">
-      <div>
-        <span class="badge">Open to: Business Analyst · HR / People Ops · Operations</span>
-        <h1>Hi, I’m Joseph  I streamline processes and support teams.</h1>
-        <p class="lead">Business & IT student in Berlin with hands‑on experience in finance and warehouse operations. I love turning messy processes into clear, efficient workflows and building lightweight tools that help teams move faster.</p>
-        <div class="cta">
-          <a class="btn primary" href="#contact">Contact me</a>
-          <a class="btn" href="#projects">See my projects</a>
-          <a class="btn" href="assets/Joseph_Felix_CV.pdf" download>Download CV</a>
+        <h1 class="fade-in">Joseph Felix Tinkasimile</h1>
+        <p class="subtitle fade-in">Business & IT · Finance & Ops · Berlin</p>
+        <p class="tagline fade-in">I streamline processes and support teams.</p>
+        <div class="cta-buttons fade-in">
+            <a href="#contact" class="btn btn-primary">Get in touch</a>
+            <a href="#work" class="btn btn-secondary">View my work</a>
         </div>
-        <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
-          <span class="pill">Berlin, Germany</span>
-          <span class="pill">Languages: English · Swahili · German</span>
-          <span class="pill">Available part‑time / full‑time</span>
-        </div>
-      </div>
-      <div class="card">
-        <h2 style="margin-top:0">Highlights</h2>
-        <ul class="muted">
-          <li>Automated manual finance tasks, reducing errors and boosting output.</li>
-          <li>Consistently hit fast pick‑pack rates in fulfillment operations.</li>
-          <li>Built a simple scheduling web app prototype to explore shift planning.</li>
-        </ul>
-      </div>
-    </section>
-    <section id="about" style="padding:60px 0;">
-  <div style="display:flex;gap:40px;align-items:center;flex-wrap:wrap;">
-      
-      <!-- LEFT SIDE — YOUR PHOTO -->
-      <div style="flex:1;min-width:260px;max-width:420px;">
-        <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/joseph-profile.jpg.jpg"
-             alt="Joseph Felix"
-             style="width:100%;border-radius:20px;box-shadow:0 0 20px rgba(0,0,0,0.4);object-fit:cover;">
-      </div>
-
-      <!-- RIGHT SIDE — ABOUT TEXT -->
-      <div style="flex:1;min-width:300px;">
-        <h2 style="margin-top:0;">About Me</h2>
-        <p class="muted" style="font-size:18px;line-height:1.6;">
-          I'm Joseph Felix Tinkasimile a Business & IT student in Berlin with experience in
-          warehouse operations, finance, digital tools, and process improvement. I enjoy solving
-          real problems through organization, workflow efficiency, and light coding.
-        </p>
-
-        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="#skills" class="btn">Skills</a>
-          <a href="#experience" class="btn">Experience</a>
-          <a href="#education" class="btn">Education</a>
-        </div>
-      </div>
-
-  </div>
-</section>
-    <section id="services">
-      <h2>My Services</h2>
-      <div class="grid cols-3">
-        <div class="card service">
-          <h3>Operations Support</h3>
-          <p class="muted">Fast, accurate pick‑pack, inventory organization, labeling, and inbound handling. Focus on safety and throughput.</p>
-          <div>
-            <span class="tag">Fulfillment</span><span class="tag">Inventory</span><span class="tag">5S</span>
-          </div>
-        </div>
-        <div class="card service">
-          <h3>Business & Data Basics</h3>
-          <p class="muted">Dashboards and reports in spreadsheets; data cleaning; KPI tracking for small teams.</p>
-          <div>
-            <span class="tag">Excel</span><span class="tag">Statistics</span><span class="tag">KPIs</span>
-          </div>
-        </div>
-        <div class="card service">
-          <h3>Web & IT (Entry)</h3>
-          <p class="muted">Landing pages, simple automations, and troubleshooting for networks/devices.</p>
-          <div>
-            <span class="tag">HTML/CSS/JS</span><span class="tag">Trello</span><span class="tag">Networking</span>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="projects">
-      <section id="projects">
-  <h2>My Work</h2>
-  <div class="grid cols-3">
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Business & IT student in Berlin with hands‑on experience in finance and warehouse operations. I love turning messy processes into clear, efficient workflows and building lightweight tools that help teams move faster.</p>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-top: 60px;">
+            <div>
+                <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/joseph-profile.jpg.jpg" alt="Joseph Felix" style="width: 100%; border-radius: 18px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+            </div>
+            <div style="text-align: left;">
+                <p style="font-size: 21px; opacity: 0.8; margin-bottom: 20px;">
+                    <strong>Berlin, Germany</strong><br>
+                    Languages: English · Swahili · German<br>
+                    Available part‑time / full‑time
+                </p>
+            </div>
+        </div>
 
-    <!-- PROJECT 1: Pick & Pack Optimization -->
-    <article class="project">
-      <img src="https://github.com/JFT-ai-web/About-Me/blob/main/pick-pack.jpg?raw=true"
-           alt="Pick and Pack Optimization">
-      <div class="proj-body">
-        <h3 style="margin:0 0 6px">Pick & Pack Optimization</h3>
-        <p class="muted">
-          Improved pick-pack speed and accuracy by optimizing warehouse labeling, layout, and scanning flows.
-        </p>
-      </div>
-    </article>
-
-    <!-- PROJECT 2: Shift Scheduler Prototype -->
-    <article class="project">
-      <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/shift-scheduler.jpg"
-           alt="Shift Scheduler Prototype">
-      <div class="proj-body">
-        <h3 style="margin:0 0 6px">Shift Scheduler Prototype</h3>
-        <p class="muted">
-          Designed a lightweight scheduling interface to visualize shifts, staff coverage, and weekly planning.
-        </p>
-      </div>
-    </article>
-
-    <!-- PROJECT 3: Finance Automation -->
-    <article class="project">
-      <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/finance-automation.jpg"
-           alt="Finance Automation Project">
-      <div class="proj-body">
-        <h3 style="margin:0 0 6px">Finance Task Automation</h3>
-        <p class="muted">
-          Created spreadsheet automation to reduce manual entry and improve budgeting & reporting efficiency.
-        </p>
-      </div>
-    </article>
-
-  </div>
-
-  <p class="muted" style="margin-top:10px">
-    Want a full case study? <a href="#contact">Contact me</a> and I’ll share more details.
-  </p>
-</section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="grid">
-        <div class="xp-item card">
-          <div class="muted">07/2024 – 03/2025<br>Berlin</div>
-          <div>
-            <strong>Warehouse Worker — acut fulfillment</strong>
-            <ul class="muted">
-              <li>Picked, packed and shipped ~30 orders/hour with attention to accuracy.</li>
-              <li>Helped assemble warehouse shelving and move inventory during expansion.</li>
-              <li>Labeled and organized inbound books; learned their internal Apache-based system.</li>
+        <div style="background: #1d1d1f; padding: 40px; border-radius: 18px; margin-top: 40px;">
+            <h3 style="font-size: 28px; margin-bottom: 20px;">Highlights</h3>
+            <ul style="list-style: none; font-size: 17px; line-height: 2;">
+                <li>✓ Automated manual finance tasks, reducing errors and boosting output</li>
+                <li>✓ Consistently hit fast pick‑pack rates in fulfillment operations</li>
+                <li>✓ Built a simple scheduling web app prototype to explore shift planning</li>
             </ul>
-          </div>
         </div>
-        <div class="xp-item card">
-          <div class="muted">10/2023<br>Berlin</div>
-          <div>
-            <strong>Warehouse Worker — Metamorph GmbH</strong>
-            <ul class="muted">
-              <li>Improved team productivity by focusing on time management and coordinated schedules.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="xp-item card">
-          <div class="muted">01/2020 – 06/2022<br>Dar es Salaam</div>
-          <div>
-            <strong>Assistant Financial Manager — AISS International School</strong>
-            <ul class="muted">
-              <li>Automated manual finance tasks, reduced errors, and improved throughput.</li>
-              <li>Helped manage budgets for school events and delivered post‑event reports.</li>
-              <li>Collaborated in projects using Agile/Scrum practices.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="card">
-        <div class="tag">Microsoft Office</div>
-        <div class="tag">Agile / Scrum</div>
-        <div class="tag">JavaScript</div>
-        <div class="tag">HTML &amp; CSS</div>
-        <div class="tag">SQL</div>
-        <div class="tag">Java</div>
-        <div class="tag">Cybersecurity (basics)</div>
-        <div class="tag">Website design (basics)</div>
-        <div class="tag">Statistics</div>
-        <div class="tag">Network troubleshooting</div>
-        <div class="tag">Trello</div>
-      </div>
-    </section>
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <h2 class="section-title">Services</h2>
+        <p class="section-subtitle">What I bring to your team</p>
+        
+        <div class="product-grid">
+            <div class="product-card">
+                <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">📦</div>
+                <h3>Operations Support</h3>
+                <p>Fast, accurate pick‑pack, inventory organization, labeling, and inbound handling. Focus on safety and throughput.</p>
+                <div class="tags">
+                    <span class="tag">Fulfillment</span>
+                    <span class="tag">Inventory</span>
+                    <span class="tag">5S</span>
+                </div>
+            </div>
 
-    <section id="education">
-      <h2>Education</h2>
-      <div class="grid cols-2">
-        <div class="card">
-          <strong>B.Sc. Business &amp; IT — IU International University of Applied Sciences</strong>
-          <div class="muted">Berlin · Coursework: Business Admin, Cybersecurity, Web Dev (JS/HTML/CSS), Managerial Accounting, Scrum, Networking</div>
+            <div class="product-card">
+                <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">📊</div>
+                <h3>Business & Data Basics</h3>
+                <p>Dashboards and reports in spreadsheets; data cleaning; KPI tracking for small teams.</p>
+                <div class="tags">
+                    <span class="tag">Excel</span>
+                    <span class="tag">Statistics</span>
+                    <span class="tag">KPIs</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div style="width: 100%; height: 200px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-size: 48px;">💻</div>
+                <h3>Web & IT (Entry)</h3>
+                <p>Landing pages, simple automations, and troubleshooting for networks/devices.</p>
+                <div class="tags">
+                    <span class="tag">HTML/CSS/JS</span>
+                    <span class="tag">Trello</span>
+                    <span class="tag">Networking</span>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <strong>GCSE Cambridge (Forms 4–6) — Academic International School</strong>
-          <div class="muted">Dar es Salaam · Physics, Computer Science & Programming, Pure Math, Statistics & Probability, Mechanics</div>
+    </section>
+
+    <!-- Work Section -->
+    <section class="section" id="work" style="max-width: 1200px;">
+        <h2 class="section-title">Featured Work</h2>
+        <p class="section-subtitle">Projects that make a difference</p>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Pick & Pack Optimization</h3>
+                <p>Improved pick-pack speed and accuracy by optimizing warehouse labeling, layout, and scanning flows.</p>
+            </div>
+            <div class="feature-image">
+                <img src="https://github.com/JFT-ai-web/About-Me/blob/main/pick-pack.jpg?raw=true" alt="Warehouse operations">
+            </div>
         </div>
-      </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Shift Scheduler Prototype</h3>
+                <p>Designed a lightweight scheduling interface to visualize shifts, staff coverage, and weekly planning.</p>
+            </div>
+            <div class="feature-image">
+                <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/shift-scheduler.jpg" alt="Scheduling app">
+            </div>
+        </div>
+
+        <div class="feature">
+            <div class="feature-content">
+                <h3>Finance Task Automation</h3>
+                <p>Created spreadsheet automation to reduce manual entry and improve budgeting & reporting efficiency.</p>
+            </div>
+            <div class="feature-image">
+                <img src="https://raw.githubusercontent.com/JFT-ai-web/About-Me/main/photos%20of%20me/finance-automation.jpg" alt="Finance automation">
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="muted">Reach out for roles in Business Analysis, HR/People Ops, or Operations. I’m happy to share more details or references.</p>
-      <div class="contact">
-        <a href="mailto:jftinka7@gmail.com" aria-label="Email Joseph">Email</a>
-        <a href="tel:+4915231304457" aria-label="Call Joseph">Phone</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-      </div>
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <h2 class="section-title">Experience</h2>
+        <p class="section-subtitle">Where I've made an impact</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">07/2024 – 03/2025 · Berlin</div>
+                <div class="timeline-title">Warehouse Worker</div>
+                <div class="timeline-company">acut fulfillment</div>
+                <div class="timeline-description">
+                    Picked, packed and shipped ~30 orders/hour with attention to accuracy. Helped assemble warehouse shelving and move inventory during expansion. Labeled and organized inbound books; learned their internal Apache-based system.
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">10/2023 · Berlin</div>
+                <div class="timeline-title">Warehouse Worker</div>
+                <div class="timeline-company">Metamorph GmbH</div>
+                <div class="timeline-description">
+                    Improved team productivity by focusing on time management and coordinated schedules.
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-date">01/2020 – 06/2022 · Dar es Salaam</div>
+                <div class="timeline-title">Assistant Financial Manager</div>
+                <div class="timeline-company">AISS International School</div>
+                <div class="timeline-description">
+                    Automated manual finance tasks, reduced errors, and improved throughput. Helped manage budgets for school events and delivered post‑event reports. Collaborated in projects using Agile/Scrum practices.
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <div class="container" style="padding:0">
-      <small>© <span id="y"></span> Joseph Felix Tinkasimile. Built with clean HTML/CSS.</small>
-    </div>
-  </footer>
+    <!-- Skills Section -->
+    <section class="section">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
 
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+        <div class="skills-grid">
+            <div class="skill-item">Microsoft Office</div>
+            <div class="skill-item">Agile / Scrum</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">HTML & CSS</div>
+            <div class="skill-item">SQL</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item">Cybersecurity</div>
+            <div class="skill-item">Website Design</div>
+            <div class="skill-item">Statistics</div>
+            <div class="skill-item">Networking</div>
+            <div class="skill-item">Trello</div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div style="background: #1d1d1f; padding: 40px; border-radius: 18px; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); opacity: 0.2; border-radius: 0 18px 0 100%;"></div>
+                <h3 style="font-size: 28px; margin-bottom: 12px;">B.Sc. Business & IT</h3>
+                <p style="font-size: 21px; opacity: 0.8; margin-bottom: 8px;">IU International University of Applied Sciences</p>
+                <p style="font-size: 17px; opacity: 0.6;">Berlin · Coursework: Business Admin, Cybersecurity, Web Dev (JS/HTML/CSS), Managerial Accounting, Scrum, Networking</p>
+            </div>
+
+            <div style="background: #1d1d1f; padding: 40px; border-radius: 18px; position: relative; overflow: hidden;">
+                <div style="position: absolute; top: 0; right: 0; width: 100px; height: 100px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); opacity: 0.2; border-radius: 0 18px 0 100%;"></div>
+                <h3 style="font-size: 28px; margin-bottom: 12px;">GCSE Cambridge (Forms 4–6)</h3>
+                <p style="font-size: 21px; opacity: 0.8; margin-bottom: 8px;">Academic International School</p>
+                <p style="font-size: 17px; opacity: 0.6;">Dar es Salaam · Physics, Computer Science & Programming, Pure Math, Statistics & Probability, Mechanics</p>
+            </div>
+        </div>
+
+        <!-- Image Gallery -->
+        <div style="margin-top: 60px;">
+            <h3 style="font-size: 32px; margin-bottom: 30px; text-align: center;">Campus Life</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop" alt="University campus" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;">
+                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=400&h=300&fit=crop" alt="Students studying" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;">
+                <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=400&h=300&fit=crop" alt="Berlin cityscape" style="width: 100%; height: 250px; object-fit: cover; border-radius: 12px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">Reach out for roles in Business Analysis, HR/People Ops, or Operations</p>
+
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h4>Email</h4>
+                <a href="mailto:jftinka7@gmail.com">jftinka7@gmail.com</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>Phone</h4>
+                <a href="tel:+4915231304457">+49 152 31304457</a>
+            </div>
+
+            <div class="contact-card">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/" target="_blank">Connect with me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Joseph Felix Tinkasimile. All rights reserved.</p>
+        <p style="margin-top: 8px;">Built with clean code and attention to detail.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Fade in on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.product-card, .feature, .timeline-item').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
